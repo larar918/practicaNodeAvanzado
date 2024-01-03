@@ -1,0 +1,58 @@
+body {
+  font: 23px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.content-container {
+  padding: 50px;
+}
+
+table {
+  border: 2px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.th {
+  font-weight: bold;
+  color: white;
+  font-size: 24px;
+  background-color: rgba(20, 193, 173, 255);
+}
+
+td {
+  border: 2px solid black;
+  padding: 7px;
+}
+
+.navbar {
+  background-color: #00C5AC;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; 
+  height: 50px; 
+}
+
+.navbarContent {
+  font-size: 23px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 15px; 
+}
+
+.language-selector {
+  margin-left: auto; /* Empuja los enlaces al extremo derecho */
+  margin-right: 10px; 
+}
+
+.language-selector a, a:visited {
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.title {
+  margin-left: 10px; 
+}

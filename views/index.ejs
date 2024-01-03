@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class='navbarContent'>
+          <h2 class="title">NodePop</h2>
+        </div>
+        <div>
+          <div class="language-selector">
+            <% getLocales().forEach(locale => { %>
+              <a href="/change-locale/<%= locale %>"><%= locale %></a>&nbsp;
+            <% }) %>
+          </div>
+        </div>
+      </div>
+    </header>
+
+  <div class="content-container">
+    <h2><%= __('Bienvenido a Nodepop') %></h2>
+
+    <table>
+      <tr class="th">
+        <td><%= __('Nombre') %></td>
+        <td><%= __('Precio') %></td>
+        <td><%= __('Transacción') %></td>
+        <td><%= __('Ruta foto (public/images/)') %></td>
+        <td><%= __('Tags') %></td>
+      </tr>
+        <% for (let i = 0; i < results.length; i++) { %>
+          <tr>
+            <td> <%= results[i].nombre %> </td>
+            <td> <%= results[i].precio %>€ </td>
+            <td>
+              <% if(results[i].venta === true){%> Venta
+              <% } else{ %> Compra <% } %>
+            </td>
+            <td><%= results[i].foto %></td>
+            <td><%= results[i].tags %></td>
+          </tr>
+        <% } %>
+    </table>
+  </div>
+
+  </body>
+</html>
